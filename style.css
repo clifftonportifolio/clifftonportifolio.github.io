@@ -31,7 +31,7 @@ nav a {
 }
 .hero {
     height: 100vh;
-    background-image: url("mypicture.jpg");
+    background-image: url("images/mypicture.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -79,7 +79,25 @@ nav a {
     text-align: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: row;
+}
+.card {
+    background-color: rgba(138, 43, 226, 0.35);
+    border-radius: 12px;
+    width: 400px;
+    margin: 20px ;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .contact:hover {
     color: blue;
@@ -92,4 +110,3 @@ nav a {
     max-width: 500px;
     border-radius: 8px;
 }
-
