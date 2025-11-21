@@ -1,5 +1,5 @@
 const hero = document.getElementById("hero");
-const cardContainer = document.querySelector(".card-container");
+const cardsContainer = document.querySelector(".cards-container");
 const content = {
     home: `<h1> I'm Cliffton Kapaga</h1>
            <p>Aspiring software developer | Data analyst | Mechanical Engineer | Automation Enthusiast</p>`,
@@ -32,13 +32,14 @@ links.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const key = link.getAttribute('data-content');
-        hero.querySelectorAll(":scope > :not(.card-container)").forEach(el=> el.remove());
+        hero.querySelectorAll(":scope > :not(.cards-container)").forEach(el=> el.remove());
         hero.insertAdjacentHTML('afterbegin', content[key])
         if(key==="about") {
             cardsContainer.innerHTML = content[key];
         } else {
             cardsContainer.innerHTML = "";
-            hero.innerHTML = content[key];
+            hero.insertAdjacentHTML('afterbegin',content[key];
         }
     })
 })
+
