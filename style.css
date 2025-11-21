@@ -31,7 +31,7 @@ nav a {
 }
 .hero {
     height: 100vh;
-    background-image: url("images/mypicture.jpg");
+    background-image: url("mypicture.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,3 +92,4 @@ nav a {
     max-width: 500px;
     border-radius: 8px;
 }
+
