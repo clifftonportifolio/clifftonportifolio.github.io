@@ -32,14 +32,13 @@ links.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const key = link.getAttribute('data-content');
-        hero.querySelectorAll(":scope > :not(.cards-container)").forEach(el=> el.remove());
+        hero.querySelectorAll(":scope > :not(.card-container)").forEach(el=> el.remove());
         hero.insertAdjacentHTML('afterbegin', content[key])
         if(key==="about") {
             cardsContainer.innerHTML = content[key];
         } else {
             cardsContainer.innerHTML = "";
-            hero.insertAdjacentHTML('afterbegin',content[key];
+            hero.innerHTML = content[key];
         }
     })
 })
-
