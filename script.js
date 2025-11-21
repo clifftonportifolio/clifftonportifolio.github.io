@@ -6,8 +6,8 @@ const content = {
             <p>I build softwares and automated systems. i enjoy learning new technologies and applying them in real life</p>`,
     projects: `<h2>Projects</h2>
                <ul>
-                   <li><strong>project One:</strong>Responsive Website built with HTML & CSS</li>
-                   <li><strong>Project Two</strong>simple calculator built with HTML, CSS & JS</li>
+                   <li><strong>Project One:</strong> Responsive Website Built with HTML & CSS</li>
+                   <li><strong>Project Two:</strong> Simple Calculator Built with HTML, CSS & JS</li>
                </ul>`,
     contact: `<h2>Contact Me</h2>
              <p>Email: engineerkapaga@gmail.com</p>
@@ -21,4 +21,3 @@ links.forEach(link => {
         hero.innerHTML = content[key];
     })
 })
-
