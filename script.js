@@ -1,9 +1,23 @@
 const hero = document.getElementById("hero");
+const cardContainer = document.querySelector(".card-container");
 const content = {
     home: `<h1> I'm Cliffton Kapaga</h1>
            <p>Aspiring software developer | Data analyst | Mechanical Engineer | Automation Enthusiast</p>`,
-    about: `<h2>About Me</h2>
-            <p>I build softwares and automated systems. i enjoy learning new technologies and applying them in real life</p>`,
+    about: `
+        <div class="card">
+        <h2>About Me</h2>
+            <p>I build softwares and automated systems</p><br>
+        </div>
+        <div class="card">
+            <h3>Education</h3>
+            <p> Bachelor of Engineering in Mechanical engineering</p>
+            <p> Masters Degree in system, control and mechatronics</p><br>
+        </div>
+        <div class="card">
+            <h3>Experience</h3>
+            <p> Mechanical Engineer at RUWASA Iringa (2023-Now)</p>
+        </div>
+        `,
     projects: `<h2>Projects</h2>
                <ul>
                    <li><strong>Project One:</strong> Responsive Website Built with HTML & CSS</li>
@@ -18,6 +32,13 @@ links.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const key = link.getAttribute('data-content');
-        hero.innerHTML = content[key];
+        hero.querySelectorAll(":scope > :not(.card-container)").forEach(el=> el.remove());
+        hero.insertAdjacentHTML('afterbegin', content[key])
+        if(key==="about") {
+            cardsContainer.innerHTML = content[key];
+        } else {
+            cardsContainer.innerHTML = "";
+            hero.innerHTML = content[key];
+        }
     })
 })
